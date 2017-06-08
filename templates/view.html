@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- SCRIPT -->
+<script src={{ url_for('static', filename='js/datatable.js') }}></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.2.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.flash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.print.min.js"></script>
+<!-- NAVBAR -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+          <img src= {{ url_for('static', filename = 'img/kwlogo-2.png') }} width="" height="30" alt="keywordily-beta" title="keywordily-beta">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div>
+          <form method="POST" action="." class="input-group navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <input type="text" name="kw_query" value="" class="form-control" placeholder="Enter the keyword" required/>
+            </div>
+            <button type="submit" class="btn btn-default kw-btn">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+        </div>
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="" href="https://baiaman.typeform.com/to/TyaUIw" data-mode="1" target="_blank"><button class="btn btn-default" type="button">feedback</button></a></li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+<!-- LEFT -->
+<div class="col-md-6" id="table_kw">
+  {{ df|safe }}
+</div>
+
+<!-- RIGHT -->
+<div class="col-md-5" id="visual_kw">
+  {% for item in twitter_list %}
+  <blockquote class="twitter-tweet">
+  <p lang="en" dir="ltr">{{item.text}}</p>by <span class='screen_name'>{{item.user.screen_name}}</span> at {{item.created_at}} <span class='retweets'>{{item.retweet_count}} retweets</span> <span class='favorites'>{{item.favorite_count}} favorites</span> <span class='location'>{{item.user.location}}</span>
+  </blockquote>
+  {% endfor %}
+
+
+
+</div>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- SCRIPT -->
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+          <img src= {{ url_for('static', filename = 'img/kwlogo-2.png') }} width="" height="30" alt="keywordily-beta" title="keywordily-beta">
+        </a>
+
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+             
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="" href="https://baiaman.typeform.com/to/TyaUIw" data-mode="1" target="_blank"><button class="btn btn-default" type="button">feedback</button></a></li>
+         
+        </ul>
+      </div>
+    </div>
+</nav>
+<!-- HOME SEARCH -->
+<div class="col-md-6 col-md-offset-3 vertical-center">
+    <div>
+    	<div class="search-header">
+    		<h1 class="text-center tagline">Find money making keywords fast</h1>
+    		<p class="text-center tagline">Type in your keywords and press the button</p>
+        <!-- <div class="element"></div> -->
+    	</div>
+    	
+    	<form method="POST" action="." class="input-group">
+	        <input id="search" name="kw_query" value="" class="form-control" placeholder="your initial keyword phrase..." required/>
+	        <span class="input-group-btn">
+			    <button class="btn btn-default" type="submit">
+			        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+			    </button>
+			</span>
+	    </form>
+
+    </div>
+</div>
+{% endblock %}

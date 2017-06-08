@@ -1,0 +1,247 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* GENERAL */
+
+h1,h2,h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#background {
+  position: fixed;
+  background-color: #f1c40f;
+  background-image: url(https://d4z6dx8qrln4r.cloudfront.net/background-5499a708df175-default.png);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+}
+
+/* DATATABLES */
+thead th {
+  color: #FF5722;
+  height: 35px;
+}
+
+div#table_kw, 
+div#visual_kw {
+  background-color: white;
+  border-radius: 3px;
+  margin-left: 30px;
+  padding-top: 10px;
+  min-height: 86%;
+}
+
+table.dataframe.dataTable.no-footer {
+    color: #636363;
+    border-color: rgba(128, 128, 128, 0.08);
+}
+
+/* NAVBAR */
+.navbar-default {
+    background-color: rgba(241, 196, 15, 0);
+}
+.navbar {
+    border-radius: 0px;
+    border: 0px solid transparent;
+}
+
+
+/* LOGO */
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-brand {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #ffffff;;
+}
+
+.navbar-default .navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 25px;
+  padding-top: 20px;
+}
+
+.navbar>.container-fluid .navbar-brand {
+    margin-left: 0px;
+}
+
+
+/* SEARCH FORM - HOME */
+.input-group .form-control:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.vertical-center {
+  min-height: 60%; 
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.search-header h1.text-center.tagline {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.search-header p.text-center.tagline {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.search-header {
+    padding-bottom: 30px;
+}
+
+.btn{
+  border-radius: 15px;
+}
+
+.input-group .form-control:last-child {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+button.btn.btn-default.kw-btn {
+  border-radius: 0px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.btn-default {
+  color: #f6b132;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(246, 177, 50, 0);
+}
+
+.btn-default:hover {
+  color: #ffffff;
+  background-color: #FF5722;
+  border-color: rgba(246, 177, 50, 0);
+}
+
+.form-control {
+  color: #f6b132;
+  background-color: #fff;
+  border: 1px solid rgba(246, 177, 50, 0);
+  border-radius: 15px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.navbar-default .navbar-form {
+  border-color: rgba(231, 231, 231, 0);
+}
+
+.navbar-form {
+    padding-top: 5px;
+}
+
+/* FEEDBACK FORM */
+
+.typeform-share.button {
+  background-color: rgba(238, 238, 238, 0) !important;
+  background-image: -webkit-linear-gradient(top, rgba(243, 243, 243, 0), rgba(225, 225, 225, 0))!important;
+  border-bottom-style: none!important;
+  border-left-style: none!important;
+  border-right-style: none!important;
+  border-top-style: none!important;
+  padding-top: 15px!important;
+
+}
+
+/* DATATABLE */
+td.excellent {
+  background-color: #2ca25f;
+  color: white;
+}
+
+td.good {
+  background-color: #99d8c9;
+  color: white;
+}
+
+td.normal {
+  background-color: #e5f5f9;
+  /*color: white;*/
+}
+
+td.bad {
+  background-color: #feb24c;
+  color: white;
+}
+
+td.terrible {
+  background-color: #f03b20;
+  color: white;
+}
+
+/* CSV and COPY */
+.dt-buttons {
+    text-align: right;
+    margin-top: 6px;
+}
+
+.dt-buttons a {
+    margin-right: 15px;
+    color: #646464;
+    border: 1px solid;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+/* Twitter Feed */
+
+div#visual_kw {
+    /*background-color: #00FFFF;*/
+    width: 40%;
+    height: 75vh;
+    overflow: scroll;
+}
+
+blockquote.twitter-tweet {
+  display: inline-block;
+  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  border-color: #eee #ddd #bbb;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  margin: 5px 5px;
+  padding: 10px 10px 10px 10px;
+  max-width: 468px;
+}
+ 
+blockquote.twitter-tweet p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+}
+ 
+blockquote.twitter-tweet a {
+  color: inherit;
+  font-weight: normal;
+  text-decoration: none;
+  outline: 0 none;
+}
+ 
+blockquote.twitter-tweet a:hover,
+blockquote.twitter-tweet a:focus {
+  text-decoration: underline;
+}
+
+span.retweets,
+span.screen_name,
+span.location
+ {
+    color: #f6b132;
+}
